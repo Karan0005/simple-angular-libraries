@@ -53,7 +53,7 @@ The workspace is organized to separate library development from distribution-rea
 Here’s a breakdown of the key npm scripts available in this workspace, designed to assist you at
 different stages of development, from testing to publishing.
 
-### Generate a New Library
+### Generate
 
 The following command helps you create a new Angular library within your workspace:
 
