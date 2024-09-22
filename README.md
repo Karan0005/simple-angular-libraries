@@ -42,6 +42,9 @@ The workspace is organized to separate library development from distribution-rea
     │   ├── kg-monaco-editor
     │   ├── your-library
     │   └── testing
+    ├── scripts
+    │   ├── build.js
+    │   └── publish.js
     └── tsconfig.json
 ```
 
@@ -61,7 +64,7 @@ npm run build
 
 You will be prompted to specify the correct library name you want to build.
 
-### Testing
+### Test
 
 To start a local development server and test your library in real-time with live reloading, use:
 
@@ -72,7 +75,7 @@ npm run test
 **Note:** Before testing, ensure you have built your library using `npm run build`. Import your
 library module in `app.module`, and use your library component's selector inside `app.component`.
 
-### Publishing
+### Publish
 
 Publishing your library involves versioning and uploading it to the npm registry.
 
