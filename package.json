@@ -3,10 +3,10 @@
   "version": "0.0.0",
   "scripts": {
     "start:testing": "ng serve",
-    "build:kg-monaco-editor": "cd projects/kg-monaco-editor && ng build --configuration=production",
-    "publish-patch:kg-monaco-editor": "cd dist/kg-monaco-editor && npm login && npm version patch && npm publish --access public",
-    "publish-minor:kg-monaco-editor": "cd dist/kg-monaco-editor && npm login && npm version minor && npm publish --access public",
-    "publish-major:kg-monaco-editor": "cd dist/kg-monaco-editor && npm login && npm version major && npm publish --access public"
+    "build-patch:kg-monaco-editor": "cd projects/kg-monaco-editor && npm version patch && ng build --configuration=production",
+    "build-minor:kg-monaco-editor": "cd projects/kg-monaco-editor && npm version minor && ng build --configuration=production",
+    "build-major:kg-monaco-editor": "cd projects/kg-monaco-editor && npm version major && ng build --configuration=production",
+    "publish:kg-monaco-editor": "cd dist/kg-monaco-editor && npm login && npm publish --access public"
   },
   "private": true,
   "dependencies": {

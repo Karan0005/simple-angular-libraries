@@ -29,20 +29,51 @@ npm install -g @angular/cli@latest
 
 The workspace is organized to separate your library development from the distribution-ready builds:
 
-```
-angular-workspace/
-|-- projects/
-|   |-- your-library/           # Source code of your library
-|-- dist/
-|   |-- your-library/           # Distribution build of your library
-|-- angular.json                # Angular CLI configuration
-|-- package.json                # Workspace-wide npm scripts and dependencies
-|-- README.md                   # Documentation for the workspace
+```sh
+└── simple-angular-libraries/
+    ├── LICENSE
+    ├── README.md
+    ├── angular.json
+    ├── package-lock.json
+    ├── package.json
+    ├── projects
+    │   ├── kg-monaco-editor
+    │   ├── your-library
+    │   └── testing
+    └── tsconfig.json
 ```
 
 ## Commands Overview
 
 Here’s a breakdown of the key npm scripts available in this workspace, designed to assist you through various stages of development, from testing to publishing.
+
+### Build
+
+This command compiles your library with production optimizations. Automatically increments the version in `package.json` (e.g., from `0.0.1` to `0.0.2`). The output is placed in the `dist/your-library` directory, ready for distribution or further testing.
+
+- **Build Patch Version**:
+
+  ```bash
+  npm run build-patch:your-library
+  ```
+
+  Increments the patch version (e.g., `1.0.0` to `1.0.1`). Patch releases are intended for backward-compatible bug fixes or small improvements.
+
+- **Build Minor Version**:
+
+  ```bash
+  npm run build-minor:your-library
+  ```
+
+  Increments the minor version (e.g., `1.0.0` to `1.1.0`). Use this for backward-compatible enhancements and new features.
+
+- **Build Major Version**:
+
+  ```bash
+  npm run build-major:your-library
+  ```
+
+  Increments the major version (e.g., `1.0.0` to `2.0.0`). Use this when making significant changes that are not backward-compatible.
 
 ### Development
 
@@ -56,14 +87,6 @@ Here’s a breakdown of the key npm scripts available in this workspace, designe
 
   **Note:** build up your library before start testing using `npm run build:your-library`, Import your library module in app-module and then use your library component selector inside app-component.
 
-### Build
-
-- **Build the Library**:
-  ```bash
-  npm run build:your-library
-  ```
-  This command compiles your library with production optimizations. The output is placed in the `dist/your-library` directory, ready for distribution or further testing.
-
 ### Publishing
 
 Publishing your library involves preparing it for public use by incrementing the version and uploading it to the npm registry.
@@ -72,36 +95,8 @@ Publishing your library involves preparing it for public use by incrementing the
 
    - The command prompts you to log in to npm with your credentials, ensuring you have the appropriate permissions to publish updates.
 
-2. **Version Increment**:
-
-   - Automatically increments the version in `package.json` (e.g., from `0.0.1` to `0.0.2`).
-
-3. **Publishing**:
+2. **Publishing**:
    - Once authenticated and the version is updated, the library is published to the npm registry using `npm publish --access public`, making it publicly available.
-
-- **Publish Patch Version**:
-
-  ```bash
-  npm run publish-patch:your-library
-  ```
-
-  Increments the patch version (e.g., `1.0.0` to `1.0.1`). Patch releases are intended for backward-compatible bug fixes or small improvements.
-
-- **Publish Minor Version**:
-
-  ```bash
-  npm run publish-minor:your-library
-  ```
-
-  Increments the minor version (e.g., `1.0.0` to `1.1.0`). Use this for backward-compatible enhancements and new features.
-
-- **Publish Major Version**:
-
-  ```bash
-  npm run publish-major:your-library
-  ```
-
-  Increments the major version (e.g., `1.0.0` to `2.0.0`). Use this when making significant changes that are not backward-compatible.
 
 ## Author Information
 
