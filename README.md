@@ -53,6 +53,18 @@ The workspace is organized to separate library development from distribution-rea
 Here’s a breakdown of the key npm scripts available in this workspace, designed to assist you at
 different stages of development, from testing to publishing.
 
+### Generate a New Library
+
+The following command helps you create a new Angular library within your workspace:
+
+```bash
+npm run generate:library
+```
+
+This command runs the Angular CLI `ng generate library` with the `--standalone=false` option. It
+will prompt you to provide a name for the new library and then scaffold the necessary files and
+folder structure, integrating the new library into your workspace.
+
 ### Build
 
 This command compiles your library with production optimizations. The output is placed in the

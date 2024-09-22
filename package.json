@@ -4,7 +4,8 @@
     "scripts": {
         "build": "node scripts/build.js",
         "test": "cd projects/testing && ng serve",
-        "publish": "node scripts/publish.js"
+        "publish": "node scripts/publish.js",
+        "generate:library": "ng generate library --standalone=false"
     },
     "private": true,
     "dependencies": {
