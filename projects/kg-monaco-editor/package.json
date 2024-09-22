@@ -1,6 +1,7 @@
 {
   "name": "kg-monaco-editor",
-  "version": "0.0.5",
+  "version": "0.0.6",
+  "license": "MIT",
   "peerDependencies": {
     "@angular/common": "^18.2.0",
     "@angular/core": "^18.2.0",
