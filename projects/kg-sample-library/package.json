@@ -1,11 +1,9 @@
 {
-    "name": "kg-monaco-editor",
-    "version": "0.0.7",
-    "license": "MIT",
+    "name": "kg-sample-library",
+    "version": "0.0.1",
     "peerDependencies": {
         "@angular/common": "^18.2.0",
-        "@angular/core": "^18.2.0",
-        "monaco-editor": "^0.52.0"
+        "@angular/core": "^18.2.0"
     },
     "dependencies": {
         "tslib": "^2.3.0"

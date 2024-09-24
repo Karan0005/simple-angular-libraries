@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterModule } from '@angular/router';
-import { KgMonacoEditorModule } from 'kg-monaco-editor';
+import { KgSampleLibraryModule } from 'kg-sample-library';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [RouterModule.forRoot([]), KgMonacoEditorModule],
+            imports: [RouterModule.forRoot([]), KgSampleLibraryModule],
             declarations: [AppComponent]
         }).compileComponents();
     });

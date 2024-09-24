@@ -3,36 +3,6 @@
     "version": 1,
     "newProjectRoot": "projects",
     "projects": {
-        "kg-monaco-editor": {
-            "projectType": "library",
-            "root": "projects/kg-monaco-editor",
-            "sourceRoot": "projects/kg-monaco-editor/src",
-            "prefix": "lib",
-            "architect": {
-                "build": {
-                    "builder": "@angular-devkit/build-angular:ng-packagr",
-                    "options": {
-                        "project": "projects/kg-monaco-editor/ng-package.json"
-                    },
-                    "configurations": {
-                        "production": {
-                            "tsConfig": "projects/kg-monaco-editor/tsconfig.lib.prod.json"
-                        },
-                        "development": {
-                            "tsConfig": "projects/kg-monaco-editor/tsconfig.lib.json"
-                        }
-                    },
-                    "defaultConfiguration": "production"
-                },
-                "test": {
-                    "builder": "@angular-devkit/build-angular:karma",
-                    "options": {
-                        "tsConfig": "projects/kg-monaco-editor/tsconfig.spec.json",
-                        "polyfills": ["zone.js", "zone.js/testing"]
-                    }
-                }
-            }
-        },
         "testing": {
             "projectType": "application",
             "schematics": {
@@ -126,6 +96,39 @@
                     }
                 }
             }
+        },
+        "kg-sample-library": {
+          "projectType": "library",
+          "root": "projects/kg-sample-library",
+          "sourceRoot": "projects/kg-sample-library/src",
+          "prefix": "lib",
+          "architect": {
+            "build": {
+              "builder": "@angular-devkit/build-angular:ng-packagr",
+              "options": {
+                "project": "projects/kg-sample-library/ng-package.json"
+              },
+              "configurations": {
+                "production": {
+                  "tsConfig": "projects/kg-sample-library/tsconfig.lib.prod.json"
+                },
+                "development": {
+                  "tsConfig": "projects/kg-sample-library/tsconfig.lib.json"
+                }
+              },
+              "defaultConfiguration": "production"
+            },
+            "test": {
+              "builder": "@angular-devkit/build-angular:karma",
+              "options": {
+                "tsConfig": "projects/kg-sample-library/tsconfig.spec.json",
+                "polyfills": [
+                  "zone.js",
+                  "zone.js/testing"
+                ]
+              }
+            }
+          }
         }
     },
     "cli": {

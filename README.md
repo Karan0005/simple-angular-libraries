@@ -39,7 +39,6 @@ The workspace is organized to separate library development from distribution-rea
     ├── package-lock.json
     ├── package.json
     ├── projects
-    │   ├── kg-monaco-editor
     │   ├── your-library
     │   └── testing
     ├── scripts
